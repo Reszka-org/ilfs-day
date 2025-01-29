@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggle.classList.remove('theme-toggle--toggled');
     }
 
+    const updateImages = () => {
+        const images = document.querySelectorAll('img[data-light][data-dark]');
+        images.forEach(img => {
+            const currentTheme = document.documentElement.dataset.theme;
+            img.src = img.getAttribute(currentTheme === 'dark' ? 'data-dark' : 'data-light');
+        });
+    };
+    updateImages();
+
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.dataset.theme;
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -19,5 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.dataset.theme = newTheme;
         localStorage.setItem('theme', newTheme);
         themeToggle.classList.toggle('theme-toggle--toggled');
+        updateImages();
     });
 });

@@ -67,6 +67,7 @@ main section {
 .team-members {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
     gap: 3rem;
 
@@ -86,10 +87,53 @@ main section {
             display: flex;
             justify-content: center;
             align-items: center;
-
+            min-height: 150px;
+            
             img:not(.blank) {
                 border-radius: 50%;
             }
+        }
+
+        .member-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .25rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+    }
+}
+
+
+.partner {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 250px;
+        gap: 1rem;
+
+        .member-photo {
+            img {
+                width: 200px;
+            }            
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 150px;
         }
 
         .member-details {
