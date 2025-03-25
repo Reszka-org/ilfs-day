@@ -11,6 +11,7 @@ header {
 
 main section {
     margin-bottom: 5rem;
+    text-align: justify;
 }
 
 .hero {
@@ -64,13 +65,10 @@ main section {
     margin-top: 3rem;
 }
 
-.team h2 {
-    margin-bottom: 1.5em;
-}
-
 .team-members {
     display: flex;
     justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
     gap: 3rem;
 
@@ -82,19 +80,14 @@ main section {
         gap: 1rem;
 
         .member-photo {
-            width: 200px;
-            height: 200px;
-            border: 10px solid #d92662;
-            border-radius: 50%;
+            img {
+                width: 200px;
+            }            
             color: white;
-            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-
-            img:not(.blank) {
-                border-radius: 50%;
-            }
+            min-height: 150px;
         }
 
         .member-details {
